@@ -1,10 +1,44 @@
 include includes/mixins.pug
 doctype html
 <html lang="en">
-
+include includes/head.pug
 body.body
-
     main.main
-
-
+        section.section
+            .container
+                .calc
+                    .calc__inner
+                        .calc__form
+                            .calc__group
+                                .calc__label Отель
+                                .calc__tabber.tabber
+                                    input.tabber__input(type="hidden")
+                                    span.tabber__item(data-value="1") Терминал Е
+                                    span.tabber__item(data-value="2") Аэроэкспресс
+                            .calc__group
+                                .calc__label Дата заезда
+                            .calc__group
+                                .calc__label Время
+                                input.calc__input
+                                .calc__label Часов
+                                .calc__spinner.spinner
+                                    input.spinner__input(type="text" value="1")
+                                    .spinner__buttons
+                                        span.spinner__button.spinner__button-up
+                                        span.spinner__button.spinner__button-down
+                            .calc__group
+                                label.calc__label Взрослых
+                                .calc__spinner.spinner
+                                    input.spinner__input(type="text" value="1")
+                                    .spinner__buttons
+                                        span.spinner__button.spinner__button-up
+                                        span.spinner__button.spinner__button-down
+                                label.calc__label Детей
+                                .calc__spinner.spinner
+                                    input.spinner__input(type="text" value="1")
+                                    .spinner__buttons
+                                        span.spinner__button.spinner__button-up
+                                        span.spinner__button.spinner__button-down
+                        .calc_buttons
+                            button.calc__button.btn.btn--red
 </html>

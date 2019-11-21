@@ -18,3 +18,87 @@ body {
   height: 100%;
   margin: 0;
 }
+
+.calc {
+  width: 360px;
+  &__group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+}
+
+.spinner {
+  display: flex;
+  flex-direction: row;
+
+
+  &__input {
+    height: 50px;
+    border: 1px solid #76c4f0;
+    background-color: #ffffff;
+
+    transition: all 0.3s ease-in-out;
+
+    width: 60px;
+  }
+
+  &:hover {
+    & .spinner__input {
+      background-color: #f7f7f7;
+      border-color: #27a4ea;
+    }
+  }
+
+  &__buttons {
+    width: 25px;
+  }
+
+  &__button {
+    display: block;
+
+    background-color: #76c4f0;
+    width: 25px;
+    height: 25px;
+
+    cursor: pointer;
+
+    &:hover {
+      background-color: #27a4eb;
+    }
+
+    &--up {
+
+    }
+
+    &--down {
+
+    }
+  }
+}
+
+
+.tabber {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    height: 50px;
+    border: 1px solid #76c4f0;
+    background-color: #ffffff;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease-in-out;
+    &:hover {
+        background-color: #f7f7f7;
+        border-color: #27a4ea;
+    }
+  }
+}
