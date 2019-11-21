@@ -21,12 +21,37 @@ body {
 
 .calc {
   width: 360px;
+  font-size: 16px;
+
   &__group {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: nowrap;
     align-items: center;
+    margin-bottom: 15px;
+  }
+
+  &__btn {
+    height: 50px;
+    background-color: #f07679;
+    border: none;
+    color: #ffffff;
+    text-transform: uppercase;
+  }
+
+  &__input {
+    height: 50px;
+    border: 1px solid #76c4f0;
+    background-color: #ffffff;
+
+    transition: all 0.3s ease-in-out;
+
+    text-align: center;
+
+    &:hover {
+
+    }
   }
 }
 
@@ -43,6 +68,7 @@ body {
     transition: all 0.3s ease-in-out;
 
     width: 60px;
+    text-align: center;
   }
 
   &:hover {
@@ -57,13 +83,16 @@ body {
   }
 
   &__button {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     background-color: #76c4f0;
     width: 25px;
     height: 25px;
 
     cursor: pointer;
+    color: #ffffff;
 
     &:hover {
       background-color: #27a4eb;
@@ -91,14 +120,14 @@ body {
     padding: 0 20px;
     height: 50px;
     border: 1px solid #76c4f0;
-    background-color: #ffffff;
-
+    background-color: #f7f7f7;
     cursor: pointer;
 
     transition: all 0.3s ease-in-out;
-    &:hover {
-        background-color: #f7f7f7;
-        border-color: #27a4ea;
+    margin: 0 10px;
+    &--active, &:hover {
+      background-color: #ffffff;
+      border-color: #27a4ea;
     }
   }
 }

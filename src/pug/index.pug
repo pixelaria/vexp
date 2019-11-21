@@ -16,7 +16,8 @@ body.body
                                     span.tabber__item(data-value="1") Терминал Е
                                     span.tabber__item(data-value="2") Аэроэкспресс
                             .calc__group
-                                .calc__label Дата заезда
+                                .calc__label Дата заезда в отель:
+                                input.calc__input.calc__input--datetime
                             .calc__group
                                 .calc__label Время
                                 input.calc__input
@@ -24,21 +25,21 @@ body.body
                                 .calc__spinner.spinner
                                     input.spinner__input(type="text" value="1")
                                     .spinner__buttons
-                                        span.spinner__button.spinner__button-up
-                                        span.spinner__button.spinner__button-down
+                                        span.spinner__button.spinner__button-up +
+                                        span.spinner__button.spinner__button-down -
                             .calc__group
                                 label.calc__label Взрослых
                                 .calc__spinner.spinner
                                     input.spinner__input(type="text" value="1")
                                     .spinner__buttons
-                                        span.spinner__button.spinner__button-up
-                                        span.spinner__button.spinner__button-down
+                                        span.spinner__button.spinner__button-up +
+                                        span.spinner__button.spinner__button-down -
                                 label.calc__label Детей
                                 .calc__spinner.spinner
                                     input.spinner__input(type="text" value="1")
                                     .spinner__buttons
-                                        span.spinner__button.spinner__button-up
-                                        span.spinner__button.spinner__button-down
+                                        span.spinner__button.spinner__button-up +
+                                        span.spinner__button.spinner__button-down -
                         .calc_buttons
-                            button.calc__button.btn.btn--red
+                            button.calc__btn.btn.btn--red Забронировать номер
 </html>
