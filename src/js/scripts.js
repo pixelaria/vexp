@@ -1,4 +1,4 @@
-$(function () {
+jQuery(document).ready(function ($) {
     console.log("init 0.1");
 
     var Calc;
@@ -13,6 +13,7 @@ $(function () {
             send_data: "Y",
             lang: "ru",
         },
+        elements: {},
         request: "/booking/",
 
         /**
@@ -24,7 +25,6 @@ $(function () {
             this.initCallbacks();
             this.initSpinners();
             this.initDatetime();
-
             this.formRequest();
         },
 
@@ -34,6 +34,13 @@ $(function () {
         prepareDOM: function () {
             Calc.root = $("#calc");
 
+            Calc.elements.hotel = Calc.root.find("input[name=\"hotel\"]");
+            Calc.elements.datefrom = Calc.root.find("input[name=\"datefrom\"]");
+            Calc.elements.timefrom = Calc.root.find("input[name=\"timefrom\"]");
+            Calc.elements.hour = Calc.root.find("input[name=\"hour\"]");
+            Calc.elements.adults = Calc.root.find("input[name=\"adults\"]");
+            Calc.elements.kids = Calc.root.find("input[name=\"kids\"]");
+            Calc.elements.button = Calc.root.find(".calc__btn");
         },
 
         /**
@@ -90,7 +97,18 @@ $(function () {
          * Init all datatime & time widgets
          */
         initDatetime: function () {
-            return false;
+            console.log("initDatetime");
+
+            Calc.elements.datefrom.datepicker({
+                userLang: "ru",
+                mode: "range",
+                regional: "ru",
+                showButtonPanel: false,
+                hideIfNoPrevNext: true,
+                firstDay: "1",
+                dateFormat: "dd.mm.yy",
+            });
+
         },
 
         /**
@@ -100,10 +118,6 @@ $(function () {
         formRequest: function () {
 
             var request = "/booking/?";
-
-            for (const [key, value] of Object.entries(test)) {
-                console.log(key, value);
-            }
 
             Object.keys(this.attrs).forEach(function (key) {
                 var val = this.attrs[key];
@@ -117,8 +131,12 @@ $(function () {
         /**
          * PrepareData for request generator
          */
-        prepareData: function() {
+        prepareData: function () {
 
-        }
+        },
     };
-})();
+
+    Calc.init();
+});
+
+
