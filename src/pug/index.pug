@@ -10,7 +10,7 @@ body.body
                     .calc__inner
                         .calc__form
                             .calc__group
-                                .calc__label Отель
+                                .calc__label Отель:
                                 .calc__tabber.tabber
                                     input.tabber__input(type="hidden", name="hotel" value="1015")
                                     span.tabber__item.tabber__item--active(data-value="1015") Терминал Е
@@ -19,31 +19,35 @@ body.body
                                 .calc__label Дата заезда в отель:
                                 input(type=text, name="datefrom").calc__input.calc__input--date
                             .calc__group
-                                .calc__label Время
-                                input(type=text, name="timefrom").calc__input.calc__input--time
-                                .calc__label Часов
-                                .calc__spinner.spinner
-                                    input.spinner__input(type="text" value="1" name="hour")
-                                    .spinner__buttons
-                                        span.spinner__button.spinner__button-up +
-                                        span.spinner__button.spinner__button-down -
+                                .calc__part
+                                    .calc__label Время:
+                                    input(type=text, name="timefrom").calc__input.calc__input--time
+                                .calc__part
+                                    .calc__label Часов:
+                                    .calc__spinner.spinner
+                                        input.spinner__input(type="text" value="4" name="hour")
+                                        .spinner__buttons
+                                            span.spinner__button.spinner__button-up +
+                                            span.spinner__button.spinner__button-down -
                             .calc__group
-                                label.calc__label Взрослых
-                                .calc__spinner.spinner
-                                    input.spinner__input(type="text" value="1" name="adults")
-                                    .spinner__buttons
-                                        span.spinner__button.spinner__button-up +
-                                        span.spinner__button.spinner__button-down -
-                                label.calc__label Детей
-                                .calc__spinner.spinner
-                                    input.spinner__input(type="text" value="1" name="kids")
-                                    .spinner__buttons
-                                        span.spinner__button.spinner__button-up +
-                                        span.spinner__button.spinner__button-down -
+                                .calc__part
+                                    label.calc__label Взрослых:
+                                    .calc__spinner.spinner
+                                        input.spinner__input(type="text" value="1" name="adults")
+                                        .spinner__buttons
+                                            span.spinner__button.spinner__button-up +
+                                            span.spinner__button.spinner__button-down -
+                                .calc__part
+                                    label.calc__label Детей:
+                                    .calc__spinner.spinner
+                                        input.spinner__input(type="text" value="0" name="kids")
+                                        .spinner__buttons
+                                            span.spinner__button.spinner__button-up +
+                                            span.spinner__button.spinner__button-down -
                         .calc_buttons
                             button.calc__btn.btn.btn--red Забронировать номер
     script(src='https://code.jquery.com/jquery-2.2.4.min.js')
     script(src='/js/jquery-ui.min.js')
-
+    script(src="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js")
     script(src='/js/bundle.js')
 </html>

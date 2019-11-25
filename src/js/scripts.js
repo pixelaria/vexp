@@ -109,6 +109,18 @@ jQuery(document).ready(function ($) {
                 dateFormat: "dd.mm.yy",
             });
 
+
+            Calc.elements.timefrom.timepicker({
+                timeFormat: 'hh:mm',
+                interval: 30,
+                minTime: '9',
+                defaultTime: '11',
+                startTime: '10:00',
+                dynamic: true,
+                dropdown: true,
+                scrollbar: true
+            });
+
         },
 
         /**
@@ -119,10 +131,10 @@ jQuery(document).ready(function ($) {
 
             var request = "/booking/?";
 
-            Object.keys(this.attrs).forEach(function (key) {
-                var val = this.attrs[key];
+            Object.keys(Calc.attrs).forEach(function (key) {
+                var val = Calc.attrs[key];
                 if (val) {
-                    request += "&" + key + "=" + this.attrs[key];
+                    request += "&" + key + "=" + Calc.attrs[key];
                 }
             });
             return request;

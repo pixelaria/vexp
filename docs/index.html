@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="/css/libs.min.css">
 <link rel="stylesheet" href="/css/jquery-ui.css">
 <link rel="stylesheet" href="/css/datepicker.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css">
 <link rel="stylesheet" href="/css/bundle.css">
 </head>
 <body class="body">
@@ -18,7 +19,7 @@
           <div class="calc__inner">
             <div class="calc__form">
               <div class="calc__group">
-                <div class="calc__label">Отель</div>
+                <div class="calc__label">Отель:</div>
                 <div class="calc__tabber tabber">
                   <input class="tabber__input" type="hidden" name="hotel" value="1015"><span class="tabber__item tabber__item--active" data-value="1015">Терминал Е</span><span class="tabber__item" data-value="1014">Аэроэкспресс</span>
                 </div>
@@ -28,24 +29,32 @@
                 <input class="calc__input calc__input--date" name="datefrom">
               </div>
               <div class="calc__group">
-                <div class="calc__label">Время</div>
-                <input class="calc__input calc__input--time" name="timefrom">
-                <div class="calc__label">Часов</div>
-                <div class="calc__spinner spinner">
-                  <input class="spinner__input" type="text" value="1" name="hour">
-                  <div class="spinner__buttons"><span class="spinner__button spinner__button-up">+</span><span class="spinner__button spinner__button-down">-</span></div>
+                <div class="calc__part">
+                  <div class="calc__label">Время:</div>
+                  <input class="calc__input calc__input--time" name="timefrom">
+                </div>
+                <div class="calc__part">
+                  <div class="calc__label">Часов:</div>
+                  <div class="calc__spinner spinner">
+                    <input class="spinner__input" type="text" value="4" name="hour">
+                    <div class="spinner__buttons"><span class="spinner__button spinner__button-up">+</span><span class="spinner__button spinner__button-down">-</span></div>
+                  </div>
                 </div>
               </div>
               <div class="calc__group">
-                <label class="calc__label">Взрослых</label>
-                <div class="calc__spinner spinner">
-                  <input class="spinner__input" type="text" value="1" name="adults">
-                  <div class="spinner__buttons"><span class="spinner__button spinner__button-up">+</span><span class="spinner__button spinner__button-down">-</span></div>
+                <div class="calc__part">
+                  <label class="calc__label">Взрослых:</label>
+                  <div class="calc__spinner spinner">
+                    <input class="spinner__input" type="text" value="1" name="adults">
+                    <div class="spinner__buttons"><span class="spinner__button spinner__button-up">+</span><span class="spinner__button spinner__button-down">-</span></div>
+                  </div>
                 </div>
-                <label class="calc__label">Детей</label>
-                <div class="calc__spinner spinner">
-                  <input class="spinner__input" type="text" value="1" name="kids">
-                  <div class="spinner__buttons"><span class="spinner__button spinner__button-up">+</span><span class="spinner__button spinner__button-down">-</span></div>
+                <div class="calc__part">
+                  <label class="calc__label">Детей:</label>
+                  <div class="calc__spinner spinner">
+                    <input class="spinner__input" type="text" value="0" name="kids">
+                    <div class="spinner__buttons"><span class="spinner__button spinner__button-up">+</span><span class="spinner__button spinner__button-down">-</span></div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -59,5 +68,6 @@
   </main>
   <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
   <script src="/js/jquery-ui.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
   <script src="/js/bundle.js"></script>
 </body></html>

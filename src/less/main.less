@@ -20,7 +20,7 @@ body {
 }
 
 .calc {
-  width: 360px;
+  width: 390px;
   font-size: 16px;
 
   &__group {
@@ -30,6 +30,17 @@ body {
     flex-wrap: nowrap;
     align-items: center;
     margin-bottom: 15px;
+  }
+  &__part {
+    display: flex;
+    width: 50%;
+    min-width: 50%;
+    justify-content: space-between;
+    align-items: center;
+
+    &:nth-child(2n) {
+      padding-left: 15px;
+    }
   }
 
   &__btn {
@@ -48,10 +59,27 @@ body {
     transition: all 0.3s ease-in-out;
 
     text-align: center;
+    font-size: 16px;
+    min-width: 100px;
+
+    &--date {
+      padding-right: 30px;
+      display: flex;
+      background-image: url("../img/icon-calendar.png");
+      background-repeat: no-repeat;
+      background-position-y: center;
+      background-position-x: right +15px;
+      width: ~'calc(50% - 15px)';
+    }
 
     &:hover {
 
     }
+  }
+
+  &__label {
+    white-space: nowrap;
+    margin-right: 15px;
   }
 }
 
@@ -69,6 +97,7 @@ body {
 
     width: 60px;
     text-align: center;
+    font-size: 16px;
   }
 
   &:hover {
@@ -116,7 +145,7 @@ body {
     cursor: pointer;
 
     transition: all 0.3s ease-in-out;
-    margin: 0 10px;
+    margin-right: 10px;
 
     white-space: nowrap;
 
@@ -124,5 +153,29 @@ body {
       background-color: #ffffff;
       border-color: #27a4ea;
     }
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
+}
+
+/* custom styles */
+.ui-datepicker-calendar .ui-state-default {
+  border: none;
+}
+
+.ui-widget.ui-widget-content {
+  background-color: #ffffff;
+  border: none;
+}
+
+.ui-menu .ui-menu-item a {
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  border-color: transparent;
+}
+.ui-menu .ui-menu-item a.ui-state-active, .ui-menu .ui-menu-item a.ui-state-hover {
+  background-color: #27a4eb;
+  color: #fff;
+  border-color: transparent;
 }
